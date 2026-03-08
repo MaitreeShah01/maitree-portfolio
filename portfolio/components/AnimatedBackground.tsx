@@ -47,10 +47,10 @@ export default function AnimatedBackground() {
         this.y += this.speedY;
         
         // Wrap around screen edges smoothly
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.x < 0) this.x = canvas?.width ?? 0;
+        if (this.x > (canvas?.width ?? 0)) this.x = 0;
+        if (this.y < 0) this.y = canvas?.height ?? 0;
+        if (this.y > (canvas?.height ?? 0)) this.y = 0;
       }
 
       draw() {
